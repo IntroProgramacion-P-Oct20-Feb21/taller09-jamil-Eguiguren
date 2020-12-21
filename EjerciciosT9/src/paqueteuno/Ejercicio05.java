@@ -18,18 +18,31 @@ public class Ejercicio05 {
      */
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        String[] estudiantes = {"Kimberly", "Hogan", 
+        String[] estudiantes = {"Kimberly", "Hogan",
             "Teresa", "Luis", "Mark", "Jennifer",
             "Alcides"};
         String inicial;
         boolean bandera = true;
-        while(bandera){
+        String inicialArreglo;
+
+        while (bandera) {
+            // Se pide al usuario ingresar una letra
             System.out.println("Ingrese una letra");
             inicial = entrada.nextLine();
-                    
+            // A la letra ingresada se la convierte en mayuscula
+            inicial = inicial.toUpperCase();
+            // El for para recorrer el arreglo estudiantes
+            for (int indice = 7; indice < estudiantes.length; indice++) {
+            // Se almacena en la variable inicialArreglo las primeras letras
+                inicialArreglo = estudiantes[indice].substring(0, 1);
+            //Se realiza una condicion if para transformar la bandera en flaso
+                if (inicial.equals(inicialArreglo)) {
+                    bandera = false;
+                }
+            }
+
         }
-        
-        
+
     }
 
 }

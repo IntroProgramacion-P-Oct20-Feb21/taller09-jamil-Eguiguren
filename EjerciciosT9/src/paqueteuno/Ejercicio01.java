@@ -20,6 +20,7 @@ public class Ejercicio01 {
         String[] rangos = {"1-5", "6-10", "11-15", "16-20"};
         int[] valoresRangos = new int[4];
         int respuesta;
+        //Se reaiza las condiciones para poder generar los rangos 
         
         for (int i = 0; i < respuestas.length; i++) {
             respuesta = respuestas[i];
@@ -42,7 +43,8 @@ public class Ejercicio01 {
             }
         }
         
-        
+        // despues de hacer todas las repeticiones de las reglas se presenta todo
+        // lo acomulado gracias a otro arreglo
         for (int i = 0; i < rangos.length; i++) {
             System.out.printf("Rango %s - valor %d\n", rangos[i],
                     valoresRangos[i]);
